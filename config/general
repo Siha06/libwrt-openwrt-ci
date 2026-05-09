@@ -1,0 +1,42 @@
+### 通用配置文件 ###
+
+CONFIG_DEVEL=y
+CONFIG_TARGET_OPTIONS=y
+
+CONFIG_CCACHE=y
+CONFIG_PACKAGE_default-settings=y
+CONFIG_PACKAGE_default-settings-chn=y
+CONFIG_TARGET_PER_DEVICE_ROOTFS=y
+CONFIG_LUCI_LANG_zh_Hans=y
+
+# CONFIG_FEED_video is not set
+# CONFIG_FEED_nss_packages is not set
+# CONFIG_FEED_sqm_scripts_nss is not set
+# CONFIG_TARGET_ROOTFS_INITRAMFS is not set
+
+CONFIG_PACKAGE_zram-swap=y
+CONFIG_PACKAGE_kmod-lib-lz4=y
+CONFIG_KERNEL_ZRAM_BACKEND_LZ4=y
+CONFIG_KERNEL_ZRAM_BACKEND_LZO=y
+CONFIG_KERNEL_ZRAM_DEF_COMP_LZ4=y
+
+CONFIG_PACKAGE_tmux=y
+CONFIG_PACKAGE_dmesg=y
+CONFIG_PACKAGE_htop=y
+CONFIG_PACKAGE_btop=y
+CONFIG_PACKAGE_blkid=y
+CONFIG_PACKAGE_fdisk=y
+CONFIG_PACKAGE_cfdisk=y
+CONFIG_PACKAGE_sgdisk=y
+CONFIG_PACKAGE_tune2fs=y
+CONFIG_PACKAGE_ariang=y
+CONFIG_PACKAGE_fstrim=y
+CONFIG_PACKAGE_nano-full=y
+CONFIG_PACKAGE_autocore=y
+CONFIG_PACKAGE_coremark=y
+CONFIG_PACKAGE_hdparm=y
+CONFIG_PACKAGE_smartmontools-drivedb=y
+CONFIG_PACKAGE_zoneinfo-asia=y
+CONFIG_PACKAGE_openssh-sftp-server=y
+CONFIG_PACKAGE_sqm-scripts-nss=n
+CONFIG_PACKAGE_freeradius3-utils=y
