@@ -8,7 +8,7 @@ env:
   REPO_BRANCH: main-nss
   CONFIG_FILE: configs/ipq60xx
   GENERAL_CONFIG_FILE: configs/general
-  DIY_SCRIPT: scripts/ipq-script.sh
+  DIY_SCRIPT: scripts/ipq.sh
   CLASH_KERNEL: amd64
   FIRMWARE_TAG: ipq60xx
   TZ: Asia/Shanghai
