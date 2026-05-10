@@ -19,17 +19,6 @@ CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_zn_m2=y
 CONFIG_ATH11K_MEM_PROFILE_512M=y
 CONFIG_NSS_FIRMWARE_VERSION_11_4=y
 
-CONFIG_PACKAGE_luci-app-attendedsysupgrade=n
-CONFIG_PACKAGE_bash=y
-CONFIG_PACKAGE_luci-theme-argon=y
-CONFIG_PACKAGE_luci-app-autoreboot=y
-CONFIG_PACKAGE_luci-app-cpufreq=y
-# CONFIG_PACKAGE_luci-app-diskman is not set
-CONFIG_PACKAGE_luci-app-filemanager=y
-CONFIG_PACKAGE_luci-app-ramfree=y
-# CONFIG_PACKAGE_luci-app-sqm is not set
-CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-bandix=n
 
 CONFIG_PACKAGE_luci-app-kwrt=n
 CONFIG_PACKAGE_luci-app-store=n
@@ -38,6 +27,7 @@ CONFIG_PACKAGE_luci-i18n-quickstart-zh-cn=n
 CONFIG_PACKAGE_luci-app-linkease=n
 
 CONFIG_PACKAGE_luci-app-adguardhome=n
+CONFIG_PACKAGE_luci-app-bandix=n
 CONFIG_PACKAGE_luci-app-gecoosac=n
 CONFIG_PACKAGE_luci-app-pushbot=n
 CONFIG_PACKAGE_luci-app-mosdns=n
