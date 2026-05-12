@@ -75,9 +75,9 @@ end_line=$(($(grep -n "luci-mod-system-plugins" feeds/luci/modules/luci-mod-syst
 sed -i "${start_line},${end_line}d" feeds/luci/modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json
 echo "已删除第 ${start_line} 到第 ${end_line} 行"
 
-#修改版本号
-sed -i 's/ImmortalWRT/OpenWrt/g' include/version.mk
-sed -i 's/ImmortalWrt/OpenWrt/g' feeds/luci/modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js
+#修改版本号OpenWrt
+sed -i 's/LibWrt/ImmortalWrt/g' include/version.mk
+#sed -i 's/ImmortalWrt/OpenWrt/g' feeds/luci/modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js
 sed -i "s/%V/25.12/g" package/base-files/files/usr/lib/os-release
 sed -i "s/%V/25.12/g" package/base-files/files/etc/openwrt_release
 #添加编译日期标识
