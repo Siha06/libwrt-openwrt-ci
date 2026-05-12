@@ -130,7 +130,7 @@ jobs:
         cd $OPENWRT_PATH/bin/targets/*/*
         cp $OPENWRT_PATH/.config IPQ60XX.config
         mv config.buildinfo IPQ60XX.config.buildinfo
-        mv libwrt-qualcommax-ipq60xx.manifest IPQ60XX.manifest
+        mv *.manifest IPQ60XX.manifest
         mv -f $OPENWRT_PATH/bin/packages/*/*/*.apk packages
         tar -zcf IPQ60XX.Packages.tar.gz packages
         rm -rf packages feeds.buildinfo version.buildinfo sha256sums profiles.json
