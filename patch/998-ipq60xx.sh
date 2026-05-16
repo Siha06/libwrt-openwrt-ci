@@ -24,9 +24,12 @@ uci set wireless.default_radio1.ssid=WiFi-$(cat /sys/class/ieee80211/phy0/macadd
 if uci -q get wireless.default_radio2 >/dev/null; then
     uci set wireless.default_radio2.ssid=WiFi-$(cat /sys/class/ieee80211/phy0/macaddress|awk -F ":" '{print $5""$6 }' | tr 'a-z' 'A-Z')-5G2
     uci set wireless.radio0.channel='149'
+    uci set wireless.default_radio2.encryption='sae-mixed'
     uci set wireless.default_radio2.key='123456qwerty'
 fi
 #uci set wireless.radio0.txpower='20'
+uci set wireless.default_radio0.encryption='sae-mixed'
+uci set wireless.default_radio1.encryption='sae-mixed'
 uci set wireless.default_radio0.key='123456qwerty'
 uci set wireless.default_radio1.key='123456qwerty'
 uci commit wireless
