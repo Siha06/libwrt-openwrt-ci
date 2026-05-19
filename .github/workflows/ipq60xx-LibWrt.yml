@@ -9,7 +9,8 @@ env:
   CONFIG_FILE: config/ipq60xx
   GENERAL_CONFIG_FILE: config/general
   DIY_SCRIPT: scripts/ipq.sh
-  CLASH_KERNEL: amd64
+  FIRMWARE_UPLOAD: false
+  FIRMWARE_RELEASE: true
   FIRMWARE_TAG: ipq60xx
   TZ: Asia/Shanghai
 
@@ -137,7 +138,7 @@ jobs:
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
 
     - name: Upload Firmware To Release(发布固件)
-      if: steps.compile.outputs.status == 'success'
+      if: steps.compile.outputs.status == 'success' && env.FIRMWARE_RELEASE == 'true'
       uses: ncipollo/release-action@main
       with:
         name: ${{ env.DATE }} for ${{ env.FIRMWARE_TAG }}
@@ -158,6 +159,13 @@ jobs:
           - 固件内核版本：**${{ env.VERSION_KERNEL }}**
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
           - ${{ env.VERSION_INFO }}
+
+    - name: Upload Firmware To Artifact(将固件上传到Artifact)
+      if: steps.compile.outputs.status == 'success' && env.FIRMWARE_UPLOAD == 'true'
+      uses: actions/upload-artifact@main
+      with:
+        name: ${{ env.DATE }} for ${{ env.FIRMWARE_TAG }}
+        path: ${{ env.FIRMWARE_PATH }}
 
     - name: Delete Old Cache(删除旧缓存)
       run: |
