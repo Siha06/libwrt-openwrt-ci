@@ -12,8 +12,8 @@ else
     mv $GITHUB_WORKSPACE/vm/libwrt-$IPQ_TARGET vermagic
 	mv $GITHUB_WORKSPACE/patch/998-$IPQ_TARGET.sh package/base-files/files/etc/uci-defaults/998-ipq.sh
 fi
-if grep -Eq "frpc=y" .config; then
-	mv $GITHUB_WORKSPACE/patch/998-z-frpc.sh package/base-files/files/etc/uci-defaults/998-z-frpc.sh
+if grep -Eq "CONFIG_PACKAGE_frpc=y" .config; then
+	mv $GITHUB_WORKSPACE/patch/998-frpc.sh package/base-files/files/etc/uci-defaults/998-z-frpc.sh
 fi
 
 # 调整NSS驱动q6_region内存区域预留大小（ipq6018.dtsi默认预留85MB，ipq6018-512m.dtsi默认预留55MB，带WiFi必须至少预留54MB，以下分别是改成预留16MB、32MB、64MB和96MB）
