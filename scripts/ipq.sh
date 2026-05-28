@@ -78,8 +78,8 @@ echo "已删除第 ${start_line} 到第 ${end_line} 行"
 #修改版本号OpenWrt
 sed -i 's/LibWrt/OpenWrt/g' include/version.mk
 sed -i 's/ImmortalWrt/OpenWrt/g' feeds/luci/modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js
-sed -i "s/%V/25.12/g" package/base-files/files/usr/lib/os-release
-sed -i "s/%V/25.12/g" package/base-files/files/etc/openwrt_release
+#sed -i "s/%V/25.12/g" package/base-files/files/usr/lib/os-release
+#sed -i "s/%V/25.12/g" package/base-files/files/etc/openwrt_release
 #添加编译日期标识
 sed -i "s/+ ' \/ ' : '') + (luciversion ||/:/g" feeds/luci/modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js
 sed -i "s/%C/\/ Complied on $(date +"%Y.%m.%d")/g" package/base-files/files/usr/lib/os-release
