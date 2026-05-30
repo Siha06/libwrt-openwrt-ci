@@ -10,7 +10,7 @@ env:
   GENERAL_CONFIG_FILE: config/general
   DIY_SCRIPT: scripts/ipq.sh
   FIRMWARE_UPLOAD: true
-  FIRMWARE_RELEASE: true
+  FIRMWARE_RELEASE: false
   FIRMWARE_TAG: ipq60xx
   TZ: Asia/Shanghai
 
